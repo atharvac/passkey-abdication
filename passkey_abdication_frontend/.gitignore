@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+*.log
+*.pot
+*.pyc
+__pycache__/
+**/__pycache__/
+pureauth/**/__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@theme {
+  --color-google-bg-l: #f0f4f9;
+  --color-google-bg-d: #1e1f20;
+
+  --color-google-card-d: #0e0e0e;
+  --color-google-card-l: #ffffff;
+
+  --color-google-btn-secondary-l: #10469b;
+  --color-google-btn-primary-l: #0b57d0;
+  --color-google-btn-txt-secondary-l: #ffffff;
+
+  --color-google-btn-secondary-d: #BBD0F8;
+  --color-google-btn-primary-d: #a8c7fa;
+  --color-google-btn-txt-secondary-d: #062e6f;
+
+  --color-google-btn2-secondary-d: #141517;
+  --color-google-btn2-secondary-l: #F8F8FD;
+
+
+  --color-google-link-l: #ECF2FA;
+  
+
+}

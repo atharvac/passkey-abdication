@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- Google Login Form Container -->
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <!-- Google logo -->
+        <div class="flex justify-center mb-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google Logo" class="w-32">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Sign in</h2>
+        
+        <!-- Google Account Email -->
+        <form>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email or phone</label>
+                <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Forgot email link -->
+            <div class="text-right mb-4">
+                <a href="#" class="text-sm text-blue-500 hover:underline">Forgot email?</a>
+            </div>
+
+            <!-- Next Button -->
+            <div class="mb-4">
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Next
+                </button>
+            </div>
+        </form>
+
+        <!-- Bottom Links -->
+        <div class="text-center mt-4">
+            <p class="text-sm text-gray-600">Not your computer? <a href="#" class="text-blue-500 hover:underline">Use Guest mode</a></p>
+            <p class="text-sm text-gray-600 mt-2">Don't have an account? <a href="#" class="text-blue-500 hover:underline">Create account</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
